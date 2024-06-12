@@ -224,7 +224,7 @@ export function Landing() {
                   </p>
                   <div className="mt-4 flex items-center space-x-2">
                     <Avatar>
-                      <AvatarImage src="/placeholder-avatar.svg" />
+                      <AvatarImage src="/placeholder-avatar.jpg" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
@@ -246,7 +246,7 @@ export function Landing() {
                   </p>
                   <div className="mt-4 flex items-center space-x-2">
                     <Avatar>
-                      <AvatarImage src="/placeholder-avatar.svg" />
+                      <AvatarImage src="/placeholder-avatar.jpg" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
@@ -268,7 +268,7 @@ export function Landing() {
                   </p>
                   <div className="mt-4 flex items-center space-x-2">
                     <Avatar>
-                      <AvatarImage src="/placeholder-avatar.svg" />
+                      <AvatarImage src="/placeholder-avatar.jpg" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div>
