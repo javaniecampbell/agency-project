@@ -94,7 +94,7 @@ export function Landing() {
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg"
+                src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder.svg"
                 width="550"
               />
             </div>
@@ -164,7 +164,7 @@ export function Landing() {
                   alt="Product 1"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="200"
-                  src="/placeholder.svg"
+                  src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder.svg"
                   width="300"
                 />
                 <h3 className="text-lg font-bold">Product 1</h3>
@@ -174,7 +174,7 @@ export function Landing() {
                   alt="Product 2"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="200"
-                  src="/placeholder.svg"
+                  src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder.svg"
                   width="300"
                 />
                 <h3 className="text-lg font-bold">Product 2</h3>
@@ -184,7 +184,7 @@ export function Landing() {
                   alt="Product 3"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="200"
-                  src="/placeholder.svg"
+                  src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder.svg"
                   width="300"
                 />
                 <h3 className="text-lg font-bold">Product 3</h3>
@@ -194,7 +194,7 @@ export function Landing() {
                   alt="Product 4"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="200"
-                  src="/placeholder.svg"
+                  src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder.svg"
                   width="300"
                 />
                 <h3 className="text-lg font-bold">Product 4</h3>
@@ -229,7 +229,7 @@ export function Landing() {
                     <Avatar>
                       <AvatarImage>
                         <StaticImage
-                          src="../../images/placeholder-avatar.jpg"
+                          src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder-avatar.jpg"
                           alt="Avatar"
                         />
                       </AvatarImage>
@@ -258,7 +258,7 @@ export function Landing() {
                     <Avatar>
                       <AvatarImage>
                         <StaticImage
-                          src="../../images/placeholder-avatar.jpg"
+                          src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder-avatar.jpg"
                           alt="Avatar"
                         />
                       </AvatarImage>
@@ -285,7 +285,7 @@ export function Landing() {
                     <Avatar>
                       <AvatarImage>
                         <StaticImage
-                          src="../../images/placeholder-avatar.jpg"
+                          src="https://ncbinnovation.blob.core.windows.net/static-cdn/images/placeholder-avatar.jpg"
                           alt="Avatar"
                         />
                       </AvatarImage>
