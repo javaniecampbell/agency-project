@@ -29,13 +29,20 @@ import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { SVGProps } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { MountainIcon } from "./MountainIcon";
+import Header from "./Header";
+import Hero from "./Hero";
+import Services from "./Services";
+import Products from "./Products";
+import Testimonials from "./Testimonials";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 export function Landing() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
+      {/* <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" to="#">
           <MountainIcon className="h-6 w-6" />
           <span className="sr-only">Your Business Agency</span>
@@ -66,9 +73,10 @@ export function Landing() {
             Contact
           </Link>
         </nav>
-      </header>
+      </header> */}
+      <Header />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -99,8 +107,9 @@ export function Landing() {
               />
             </div>
           </div>
-        </section>
-        <section
+        </section> */}
+        <Hero />
+        {/* <section
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
           id="services"
         >
@@ -147,8 +156,9 @@ export function Landing() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="products">
+        </section> */}
+        <Services />
+        {/* <section className="w-full py-12 md:py-24 lg:py-32" id="products">
           <div className="container px-4 md:px-6 space-y-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -204,8 +214,9 @@ export function Landing() {
               </div>
             </div>
           </div>
-        </section>
-        <section
+        </section> */}
+        <Products />
+        {/* <section
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
           id="testimonials"
         >
@@ -308,8 +319,9 @@ export function Landing() {
               </div>
             </div>
           </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="contact-us">
+        </section> */}
+        <Testimonials />
+        {/* <section className="w-full py-12 md:py-24 lg:py-32" id="contact-us">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -346,32 +358,15 @@ export function Landing() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <Contact />
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      {/* <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           © 2024 Your Business Agency. All rights reserved.
         </p>
-      </footer>
+      </footer> */}
+      <Footer />
     </div>
-  );
-}
-
-function MountainIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
   );
 }
