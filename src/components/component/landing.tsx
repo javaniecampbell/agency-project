@@ -38,6 +38,7 @@ import Products from "./Products";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { FullWidthFooter } from "./full-width-footer";
 
 export function Landing() {
   return (
@@ -50,7 +51,8 @@ export function Landing() {
         <Testimonials />
         <Contact />
       </main>
-      <Footer />
+      {/* <Footer /> */}
+      <FullWidthFooter />
     </div>
   );
 }
