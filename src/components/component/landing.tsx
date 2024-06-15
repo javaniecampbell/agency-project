@@ -39,7 +39,8 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import { FullWidthFooter } from "./full-width-footer";
-
+import { Chat } from "@aidbase/chat";
+import config from "../../configs/env";
 export function Landing() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -52,6 +53,9 @@ export function Landing() {
         <Contact />
       </main>
       {/* <Footer /> */}
+      <span className="fixed z-50 bottom-2 right-2">
+        <Chat chatbotID={config.AIID} />
+      </span>
       <FullWidthFooter />
     </div>
   );
