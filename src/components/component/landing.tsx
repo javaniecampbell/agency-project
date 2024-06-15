@@ -53,7 +53,7 @@ export function Landing() {
         <Contact />
       </main>
       {/* <Footer /> */}
-      <span className="fixed z-50 bottom-2 right-2">
+      <span className="fixed z-50 bottom-2 right-2 lg:bottom-6 lg:right-6">
         <Chat chatbotID={config.AIID} />
       </span>
       <FullWidthFooter />
