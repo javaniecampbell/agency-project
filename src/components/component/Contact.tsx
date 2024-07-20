@@ -31,11 +31,13 @@ const Contact: React.FC = () => {
       const responseData = await response.json();
       setIsLoading(false);
       if (response.status === 201) {
+        console.info("Created");
         toast({
           title: "Scheduled: Catch up",
           description: "We will get back to you as soon as possible.",
         });
       } else if (response.status === 200) {
+        console.info("OK");
         toast({
           title: "Scheduled: Catch up",
           description:
@@ -43,6 +45,7 @@ const Contact: React.FC = () => {
             "We will get back to you as soon as possible.",
         });
       } else if (response.status === 400 || response.status === 500) {
+        console.error("Bad Request");
         toast({
           title: "Error",
           description:
@@ -54,6 +57,7 @@ const Contact: React.FC = () => {
     } catch (error) {
       setIsLoading(false);
       if (error instanceof Error) {
+        console.error(error.message);
         toast({
           title: "Error",
           description: "Something went wrong. Please try again later. 😅",
