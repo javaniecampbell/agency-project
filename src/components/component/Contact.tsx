@@ -7,6 +7,7 @@ const apiUrl =
 const Contact: React.FC = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
+  const formRef = React.useRef<HTMLFormElement>(null);
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -56,7 +57,9 @@ const Contact: React.FC = () => {
           variant: "destructive",
         });
       }
-      e.currentTarget?.reset();
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     } catch (error) {
       setIsLoading(false);
       if (error instanceof Error) {
@@ -84,6 +87,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="mx-auto w-full max-w-sm space-y-2">
             <form
+              ref={formRef}
               className="flex flex-col space-y-2"
               method="POST"
               onSubmit={onSubmit}
