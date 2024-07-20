@@ -1,9 +1,11 @@
 import * as React from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 const apiUrl =
   process.env.GATSBY_API_URL ?? "https://webhooks-functions.deno.dev";
 const Contact: React.FC = () => {
+  const { toast } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,11 +28,18 @@ const Contact: React.FC = () => {
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
-        console.log("Success:", data);
+        toast({
+          title: "Scheduled: Catch up",
+          description: "We will get back to you as soon as possible.",
+        });
       })
       .catch((error) => {
         setIsLoading(false);
-        console.error("Error:", error);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
       });
   };
   return (
