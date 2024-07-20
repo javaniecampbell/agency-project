@@ -7,7 +7,7 @@ const apiUrl =
 const Contact: React.FC = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     // const data = Object.fromEntries(formData);
@@ -18,31 +18,49 @@ const Contact: React.FC = () => {
       message: formData.get("message"),
     };
     setIsLoading(true);
-    fetch(apiUrl + "/create-contactus-ticket", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // credentials: "include",
-      // mode: "cors",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setIsLoading(false);
+    try {
+      const response = await fetch(apiUrl + "/create-contactus-ticket", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // credentials: "include",
+        // mode: "cors",
+      });
+      const responseData = await response.json();
+      setIsLoading(false);
+      if (response.status === 201) {
         toast({
           title: "Scheduled: Catch up",
           description: "We will get back to you as soon as possible.",
         });
-      })
-      .catch((error) => {
-        setIsLoading(false);
+      } else if (response.status === 200) {
+        toast({
+          title: "Scheduled: Catch up",
+          description:
+            responseData.message ??
+            "We will get back to you as soon as possible.",
+        });
+      } else if (response.status === 400 || response.status === 500) {
+        toast({
+          title: "Error",
+          description:
+            responseData.message ??
+            "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      setIsLoading(false);
+      if (error instanceof Error) {
         toast({
           title: "Error",
           description: "Something went wrong. Please try again later.",
           variant: "destructive",
         });
-      });
+      }
+    }
   };
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" id="contact-us">
