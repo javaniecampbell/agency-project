@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     const formData = new FormData(e.currentTarget);
     // const data = Object.fromEntries(formData);
     const data = {
-      name: formData.get("name"),
+      name: formData.get("clientName"),
       email: formData.get("emailAddress"),
       phone: formData.get("phoneNumber") ?? "+1876xxxxxxx",
       message: formData.get("message"),
