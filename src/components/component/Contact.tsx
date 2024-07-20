@@ -24,7 +24,8 @@ const Contact: React.FC = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: 'include',
+      credentials: "include",
+      mode: "cors",
     })
       .then((res) => res.json())
       .then((data) => {
