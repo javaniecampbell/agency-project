@@ -56,6 +56,7 @@ const Contact: React.FC = () => {
           variant: "destructive",
         });
       }
+      e.currentTarget?.reset();
     } catch (error) {
       setIsLoading(false);
       if (error instanceof Error) {
