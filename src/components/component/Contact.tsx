@@ -58,7 +58,8 @@ const Contact: React.FC = () => {
           <div className="mx-auto w-full max-w-sm space-y-2">
             <form
               className="flex flex-col space-y-2"
-              onSubmit={(e) => onSubmit}
+              method="POST"
+              onSubmit={onSubmit}
             >
               <Input
                 className="max-w-lg flex-1"
