@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
         // credentials: "include",
         // mode: "cors",
       });
-      const responseData = await response.json();
+
       setIsLoading(false);
       if (response.status === 201) {
         console.info("Created");
@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
           description: "We will get back to you as soon as possible.",
         });
       } else if (response.status === 200) {
+        const responseData = await response.json();
         console.info("OK");
         toast({
           title: "Scheduled: Catch up",
@@ -45,6 +46,7 @@ const Contact: React.FC = () => {
             "We will get back to you as soon as possible.",
         });
       } else if (response.status === 400 || response.status === 500) {
+        const responseData = await response.json();
         console.error("Bad Request");
         toast({
           title: "Error",
