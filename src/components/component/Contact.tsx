@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
           title: "Error",
           description:
             responseData.message ??
-            "Something went wrong. Please try again later.",
+            "Something went wrong. Please try again later. 😥",
           variant: "destructive",
         });
       }
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
       if (error instanceof Error) {
         toast({
           title: "Error",
-          description: "Something went wrong. Please try again later.",
+          description: "Something went wrong. Please try again later. 😅",
           variant: "destructive",
         });
       }
