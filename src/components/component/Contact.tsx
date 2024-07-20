@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
+const apiUrl =
+  process.env.GATSBY_API_URL ?? "https://webhooks-functions.deno.dev";
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -15,7 +16,7 @@ const Contact: React.FC = () => {
       message: formData.get("message"),
     };
     setIsLoading(true);
-    fetch(process.env.GATSBY_API_URL + "/create-contactus-ticket", {
+    fetch(apiUrl + "/create-contactus-ticket", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
